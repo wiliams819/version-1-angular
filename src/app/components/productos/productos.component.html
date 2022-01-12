@@ -1,1 +1,4 @@
-<p>productos works!</p>
+<div class="products--grid">
+  <!-- se cicla el componente producto y se envia product al componente producto -->
+  <app-producto [Product]="product" *ngFor="let product of products" ></app-producto>
+</div>
