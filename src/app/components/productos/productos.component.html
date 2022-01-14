@@ -1,4 +1,16 @@
+<!-- se muestran los datos de carrito y total -->
+<p>Cantidad Productos:{{carrito.length}}</p>
+<p>Total:{{total}}</p>
 <div class="products--grid">
-  <!-- se cicla el componente producto y se envia product al componente producto -->
-  <app-producto [Product]="product" *ngFor="let product of products" ></app-producto>
+  <!-- se cicla el componente producto y se envia product al componente producto
+
+  recibirmos el evento agregarProducto de producto.component.ts y le asignamos a una funcion
+  local AgregandoAlCarrito que se encuentra en el componente productos.component.ts y escuchamos
+  el evento enviado  como propiedad
+  -->
+  <app-producto
+  [Product]="product"
+  *ngFor="let product of products"
+  (agregarProducto)="AgregandoAlCarrito($event)">
+  </app-producto>
 </div>

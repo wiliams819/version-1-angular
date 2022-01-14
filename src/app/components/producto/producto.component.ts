@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
 import { Producto } from '../../../model/product';
 @Component({
   selector: 'app-producto',
@@ -15,9 +15,16 @@ con Producto se hace el llamado a Input */
     description: "",
     image: "",
   };
+  /* se emite el evento agregarProducto creando una instancia de EventEmitter de tipo Producto */
+  @Output() agregarProducto = new EventEmitter<Producto>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+/* metodo local que se emite que ejecuta lo emitido(emite el arreglo con la interfaz de guia)
+este metodo esta en button de etiqueta*/
+  addProduct(){
+    this.agregarProducto.emit(this.Product);
   }
 
 }
