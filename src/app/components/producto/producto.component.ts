@@ -10,10 +10,11 @@ export class ProductoComponent implements OnInit {
 con Producto se hace el llamado a Input */
   @Input() Product: Producto = {
     id: 0,
-    name: "",
+    title: "",
     price: 0,
     description: "",
     image: "",
+    category: "",
   };
   /* se emite el evento agregarProducto creando una instancia de EventEmitter de tipo Producto */
   @Output() agregarProducto = new EventEmitter<Producto>();
