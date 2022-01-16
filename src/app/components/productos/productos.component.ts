@@ -14,6 +14,8 @@ export class ProductosComponent implements OnInit {
   carrito: Producto[] = [];
   /* tiene el total de cada producto */
   total: number = 0;
+  hoy = new Date();
+  dia = new Date(2021,1,21);
 
   //se crea un arreglo con productos guiandose con la interfaz Producto
   products: Producto[] = []

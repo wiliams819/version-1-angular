@@ -1,8 +1,8 @@
 <!-- se crea el html de producto que contiene cada parte del arreglo del product
 envido por productos -->
 <img src="{{Product.image}}" alt="">
-<h1>{{Product.title}}</h1>
-<h2>{{Product.price}}</h2>
+<h1>{{Product.title | reverse }}</h1>
+<h2>{{Product.price | currency:"Q"}}</h2>
 <p>{{Product.description}}</p>
 <p>{{Product.category}}</p>
 <!-- se escucha al evento addProduct -->

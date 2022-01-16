@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+/* modulo para trabajar con ngModel []  */
 import { FormsModule } from '@angular/forms';
 /* modulo para trabajar con solicitudes http */
 import { HttpClientModule } from '@angular/common/http';
@@ -9,6 +10,8 @@ import { AppComponent } from './app.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { NavegacionComponent } from './components/navegacion/navegacion.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,8 @@ import { NavegacionComponent } from './components/navegacion/navegacion.componen
     ProductoComponent,
     ProductosComponent,
     NavegacionComponent,
+    ReversePipe,
+    TimeAgoPipe,
   ],
   imports: [
     BrowserModule,

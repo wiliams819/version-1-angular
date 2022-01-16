@@ -13,4 +13,6 @@
   *ngFor="let product of products"
   (agregarProducto)="AgregandoAlCarrito($event)">
   </app-producto>
+  <p>{{hoy | timeAgo}}</p>
+  <p>{{dia | date}}</p>
 </div>
