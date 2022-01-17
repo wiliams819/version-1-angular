@@ -12,6 +12,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { NavegacionComponent } from './components/navegacion/navegacion.component';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
+import { HighlightDirective } from './directivas/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TimeAgoPipe } from './pipes/time-ago.pipe';
     NavegacionComponent,
     ReversePipe,
     TimeAgoPipe,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,8 @@ envido por productos -->
 <img src="{{Product.image}}" alt="">
 <h1>{{Product.title | reverse }}</h1>
 <h2>{{Product.price | currency:"Q"}}</h2>
-<p>{{Product.description}}</p>
+<!-- la directiva se usa como atributo -->
+<p appHighlight>{{Product.description}}</p>
 <p>{{Product.category}}</p>
 <!-- se escucha al evento addProduct -->
 <button (click)="addProduct()">Agregar al carrito</button>
